@@ -15,6 +15,14 @@ public class Service implements UseCase {
         return animal;
     }
 
+    public Object createAnimal(String name, int age) {
+        var animal = new Animal();
+        animal.setName(name);
+        animal.setAge(age);
+        animal.setType("Personality");
+        return animal;
+    }
+
     public Animal method2() {
         return new Animal();
     }

@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Memória antes da execução: " + beforeMemory + " bytes");
 
         var service = new Service();
-        var response = FactoryProcessor.process(service);
+        var response = FactoryProcessor.process(service.getClass(), () -> service.createAnimal("Rino", 2));
         System.out.println(response);
 
         long endTime = System.nanoTime();
