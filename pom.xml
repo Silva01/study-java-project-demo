@@ -13,6 +13,8 @@
     <module>injection-study</module>
       <module>meta-factory</module>
       <module>meta-factory-processor</module>
+      <module>inject-code-meta</module>
+    <module>study-test</module>
   </modules>
 
   <properties>
