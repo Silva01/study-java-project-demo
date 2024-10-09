@@ -1,5 +1,7 @@
 package br.net.silva.daniel.spring.aop.study.component;
 
+import br.net.silva.daniel.spring.aop.study.annotation.PrintInClass;
+import br.net.silva.daniel.spring.aop.study.annotation.Proccess;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,5 +16,11 @@ public class AspectComponent {
         System.out.println("Log printado via AOP");
         var proceed = joinPoint.proceed();
         return "Resultado do método: " + proceed;
+    }
+
+    @Around("@annotation(proccess)")
+    public Object processing(ProceedingJoinPoint joinPoint, Proccess proccess) throws Throwable {
+        System.out.println("Log printado via AOP Com Multiplos processamentos " + proccess.name());
+        return joinPoint.proceed();
     }
 }
