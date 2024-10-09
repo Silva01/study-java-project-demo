@@ -5,7 +5,7 @@ import br.net.silva.daniel.spring.aop.study.annotation.Proccess;
 import org.springframework.stereotype.Service;
 
 @Service
-@PrintInClass
+@PrintInClass("HelloService")
 public class HelloService {
 
     @Proccess(name = "HelloService")
