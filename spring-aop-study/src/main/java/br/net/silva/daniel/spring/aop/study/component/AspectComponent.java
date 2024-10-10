@@ -7,7 +7,6 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +24,7 @@ public class AspectComponent {
     @Around("@annotation(proccess)")
     public Object processing(ProceedingJoinPoint joinPoint, Proccess proccess) throws Throwable {
         System.out.println("Log printado via AOP Com Multiplos processamentos " + proccess.name());
+        System.out.println("Parametros do metodo " + joinPoint.getArgs()[0]);
         return joinPoint.proceed();
     }
 

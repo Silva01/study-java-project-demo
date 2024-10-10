@@ -20,7 +20,6 @@ public class BaseController {
     @GetMapping("/hello")
     @ResponseStatus(HttpStatus.OK)
     @LogAnnotationTime
-    @Proccess(name = "BaseController")
     public String hello() {
         return helloService.procced("Hello World Controller");
     }
