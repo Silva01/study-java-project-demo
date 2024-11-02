@@ -15,6 +15,7 @@
       <module>meta-factory-processor</module>
       <module>inject-code-meta</module>
     <module>study-test</module>
+    <module>streams and lambdas</module>
   </modules>
 
   <properties>
